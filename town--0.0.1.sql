@@ -7,9 +7,9 @@ $func$
 BEGIN
    EXECUTE format('
       CREATE TABLE IF NOT EXISTS %I (
-       id serial PRIMARY KEY,
-       ts timestamp,
-       tag varchar(30),
+       id bigserial PRIMARY KEY,
+       ts timestamp with time zone,
+       tag varchar(255),
        data jsonb
       )', t_name);
 END

@@ -14,6 +14,7 @@ BEGIN
       );
 
       CREATE INDEX idx_%I_tags ON %I USING GIN(tags);
-      ', t_name, t_name, t_name);
+      CREATE INDEX idx_%I_ts ON %I USING GIST(ts);
+      ', t_name, t_name, t_name, t_name, t_name);
 END
 $func$;

@@ -13,7 +13,7 @@ BEGIN
        data JSONB default ''{}''::jsonb
       );
 
-      CREATE INDEX idx_tags ON %I USING GIN(tags);
-      ', t_name, t_name);
+      CREATE INDEX idx_%I_tags ON %I USING GIN(tags);
+      ', t_name, t_name, t_name);
 END
 $func$;

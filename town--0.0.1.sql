@@ -6,6 +6,7 @@ CREATE OR REPLACE FUNCTION create_town_table(t_name varchar(30))
 $func$
 BEGIN
    EXECUTE format('
+      CREATE  EXTENSION IF NOT EXISTS btree_gist ;
       CREATE TABLE IF NOT EXISTS %I (
        id BIGSERIAL PRIMARY KEY,
        ts TIMESTAMP WITH TIME ZONE,

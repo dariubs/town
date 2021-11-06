@@ -4,7 +4,7 @@ towndb
 Manage timeseries data easily in postgresql
 
 install
-=======
+-------
 
 You need to have postgresql on your system. At first, build and add town extension to your postgres:
 
@@ -24,6 +24,10 @@ now you can create town table in any of your databases:
 select create_town_table(table_name);
 ```
 
+example
+-------
+
+[town examples](example.md)
 
 
 

@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   container-job:
     runs-on: ubuntu-latest
-    container: ubuntu:latest
+    container: postgres:latest
 
     services:
       postgres:

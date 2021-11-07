@@ -1,5 +1,6 @@
 towndb
 ======
+[![test towndb](https://github.com/dariubs/town/actions/workflows/test.yml/badge.svg)](https://github.com/dariubs/town)
 
 Manage timeseries data easily in postgresql
 

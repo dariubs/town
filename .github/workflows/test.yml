@@ -1,4 +1,4 @@
-name: Test build extenstion on Postgres
+name: Test build extension on Postgres
 on: [push, pull_request]
 
 jobs:
@@ -24,9 +24,11 @@ jobs:
       - name: Install build essentials tools
         run: apt-get update && apt-get install -y build-essential
 
-      - name: Build extenstion
+      - name: Build extension
         run: make install
         env:
           POSTGRES_HOST: postgres
           POSTGRES_PORT: 5432
       
+      - name: Create extension in db
+        run: psql -U postgres postgres -c "create extension town;"

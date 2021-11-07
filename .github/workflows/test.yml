@@ -26,9 +26,6 @@ jobs:
 
       - name: Build extension
         run: make install
-
-      - name: Wait 10 seconds
-        run: sleep 10s
       
       - name: Create extension in db
-        run: PGHOST=$(cat /etc/hostname) ;psql -h $PGHOST -p 5432 -U postgres postgres -c "create extension town;"
+        run: sleep 10s;PGHOST=$(cat /etc/hostname) ;psql -h $PGHOST -p 5432 -U postgres postgres -c "create extension town;"

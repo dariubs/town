@@ -1,0 +1,32 @@
+name: Test build extenstion on Postgres
+on: [push, pull_request]
+
+jobs:
+  container-job:
+    runs-on: ubuntu-latest
+    container: ubuntu:latest
+
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: Install build essentials tools
+        run: apt-get install -y build-essential
+
+      - name: Build extenstion
+        run: make install
+        env:
+          POSTGRES_HOST: postgres
+          POSTGRES_PORT: 5432
+      

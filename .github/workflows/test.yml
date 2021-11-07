@@ -26,9 +26,9 @@ jobs:
 
       - name: Build extension
         run: make install
-        env:
-          POSTGRES_HOST: postgres
-          POSTGRES_PORT: 5432
+
+      - name: Wait 10 seconds
+        run: sleep 10s
       
       - name: Create extension in db
-        run: psql -U postgres postgres -c "create extension town;"
+        run: PGHOST=$(cat /etc/hostname) ;psql -h $PGHOST -p 5432 -U postgres postgres -c "create extension town;"

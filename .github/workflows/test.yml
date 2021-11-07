@@ -28,4 +28,4 @@ jobs:
         run: make install
       
       - name: Create extension in db
-        run: sleep 10s;PGHOST=$(cat /etc/hostname) ;psql -h $PGHOST -p 5432 -U postgres postgres -c "create extension town;"
+        run: sleep 45s;PGHOST=$(cat /etc/hostname) ;psql -h $PGHOST -p 5432 -U postgres postgres -c "create extension town;"

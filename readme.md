@@ -30,5 +30,11 @@ example
 [town examples](example.md)
 
 
+License
+-------
+
+[MIT License](license.md)
+
+
 
 

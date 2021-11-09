@@ -1,5 +1,5 @@
 EXTENSION = town        
-DATA = town--0.0.1.sql  # script files to install
+DATA = sql/town--0.1.0.sql
 
 # postgres build stuff
 PG_CONFIG = pg_config

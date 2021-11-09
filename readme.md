@@ -2,7 +2,7 @@ towndb
 ======
 [![test towndb](https://github.com/dariubs/town/actions/workflows/test.yml/badge.svg)](https://github.com/dariubs/town)
 
-Manage timeseries data easily in postgresql
+Postgres extension for manage time-series data
 
 install
 -------
@@ -25,10 +25,10 @@ now you can create town table in any of your databases:
 select create_town_table(table_name);
 ```
 
-example
+town by exaple
 -------
 
-[town examples](example.md)
+[towndb by examples](docs/example.md)
 
 
 License

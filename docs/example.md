@@ -1,4 +1,4 @@
-example
+
 =======
 
 create town table
@@ -25,7 +25,7 @@ select by tag
 
 ```sql
 SELECT
-    ts, tags, data->>'val'
+    ts, tags, data->>'val' as val
 FROM
     table_name
 WHERE
@@ -37,7 +37,7 @@ select in time range
 
 ```sql
 SELECT
-    ts, tags, data->>'val'
+    ts, tags, data->>'val' as val
 FROM
     table_name
 WHERE

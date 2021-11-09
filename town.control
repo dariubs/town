@@ -1,4 +1,4 @@
 # town extension
 comment = 'mangae time-series data in postgres'
-default_version = '0.0.1'
+default_version = '0.1.0'
 relocatable = true
